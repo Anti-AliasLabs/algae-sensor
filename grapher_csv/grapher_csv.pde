@@ -1,7 +1,7 @@
-/* save_csv
+/* grapher_csv
  *
- *  by Becky Stewart of Codasign
- *  becky@codasign.com
+ *  by Becky Stewart of Anti-Alias Labs
+ *  becky@antialiaslabs.com
  *
  *  Reads in stream of numbers from serial
  *  (such as from an Arduino) and saves the
@@ -21,7 +21,7 @@ void setup() {
   size( 900, 400 ); // the width and height of the window
 
   println( Serial.list() );
-  String portName = Serial.list()[0];
+  String portName = Serial.list()[3];
   print( "Port chosen is " );
   println( portName );
   myPort = new Serial(this, portName, 9600);
